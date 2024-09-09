@@ -21,4 +21,16 @@ public class Banco {
 		this.contas = contas;
 	}
 
+	public void imprimirClientes() {
+		if (contas == null || contas.isEmpty()) {
+			System.out.println("Nenhuma conta encontrada.");
+			return;
+		}
+		System.out.println("Lista de Clientes do Banco: " + nome);
+		for (Conta conta : contas) {
+			System.out.println("Cliente: " + conta.getCliente().getNome());
+			// ou outra informação da conta
+		}
+	}
+
 }
